@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Hangman</title>
-    <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main class="main-container">
       <section class="main-status">
+        <p id="status">_</p>
+        <p>Total Score:</p>
+        <p id="scores">00</p>
+
         <p>Alphabet:</p>
-        <p id="status">?</p>
+        <p id="word-input">?</p>
         <p id="warning">no warning (yet)</p>
 
         <br>
@@ -49,5 +52,7 @@
         <button type="button" id="input-Z" onclick="setAlphabet('Z')" name="button">Z</button>
       </article>
     </main>
+
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
