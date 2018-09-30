@@ -1,4 +1,9 @@
-let secret_word = 'WIN';
+// SELECT WORD FROM WORD LIST
+let random_index = Math.floor(Math.random() * words.length);
+
+let secret_word = words[random_index].toUpperCase();
+console.log("YOU! You are such a cheater! I bet you are a developer... aren't you?! Anyways... the secret word is...: ", secret_word);
+let test_word = 'WILLISAWSOME';
 let guess_word = [];
 
 let total_no_guesses = 10;
@@ -20,8 +25,6 @@ document.getElementById("status").innerHTML = guess_word.join(' ');
 // GAME MECHANICS =========================
 function setAlphabet(alphabet) {
   input_alphabet = alphabet;
-
-  // CHECK IF THE ALPHABET IS IN THE SECRET WORD
   if (secret_word.includes(input_alphabet)) {
     for (let i = 0; i < secret_word.length; i++) {
       if (input_alphabet == secret_word[i]) {
@@ -44,9 +47,9 @@ function setAlphabet(alphabet) {
     letters_guessed_output += ' ' + input_alphabet;
   }
 
-  document.getElementById("word-input").innerHTML = input_alphabet;
-  document.getElementById("guessed").innerHTML = letters_guessed_output;
-  console.log(letters_guessed);
+  // document.getElementById("word-input").innerHTML = input_alphabet;
+  // document.getElementById("guessed").innerHTML = letters_guessed_output;
+  // console.log(letters_guessed);
 
   // GAME OVER?
   if (total_no_guesses == 0) {
@@ -54,6 +57,7 @@ function setAlphabet(alphabet) {
     displayWarning("lose", secret_word);
   } else if (guess_word.includes('_') == false) {
     // alert("You Won!");
+    console.log("You Won!");
     displayWarning("win", secret_word);
   }
 }
