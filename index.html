@@ -4,24 +4,49 @@
     <meta charset="utf-8">
     <title>Hangman</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT - Roboto Slab / Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Source+Sans+Pro:400,600,700,900" rel="stylesheet">
+
   </head>
   <body>
+    <section class="nav-container">
+      <div class="nav-title">Hangman game</div>
+      <div class="nav-about">About</div>
+    </section>
+
     <main class="main-container">
-      <section class="main-status">
-        <p id="status">_</p>
-        <p>Total Score:</p>
-        <p id="scores">00</p>
 
-        <p>Alphabet:</p>
-        <p id="word-input">?</p>
-        <p id="warning">no warning (yet)</p>
+      <!-- MAIN GAME SCREEN / GUESSES LEFT SCREEN -->
+      <section class="main-game-area">
+        <div class="main-guess-area">
+          <p class="main-warning" id="warning">no warning (yet)</p>
+          <div class="arena" id="status">
+            _
+          </div>
+        </div>
 
-        <br>
-        <article class="main-guessed-words">
-          <p>Guessed Alphabet:</p>
-          <p id="guessed">-</p>
-        </article>
+        <div class="main-score">
+          <p>Guess(es) Left:</p>
+          <p id="scores">00</p>
+          <br>
+
+          <!-- THIS IS A TEST - FOR DEVELOPER MODE-->
+          <div class="test-area">
+            <p>Alphabet:</p>
+            <p id="word-input">?</p>
+
+            <br>
+            <article class="main-guessed-words">
+              <p>Guessed Alphabet:</p>
+              <p id="guessed">-</p>
+            </article>
+          </div>
+          <!-- DEVELOPER MODE END -->
+
+        </div>
       </section>
+
       <!-- Word -->
       <article class="main-select-word">
         <button type="button" id="input-A" onclick="setAlphabet('A')" name="button">A</button>
@@ -54,5 +79,6 @@
     </main>
 
     <script type="text/javascript" src="index.js"></script>
+    <footer>Will Kim 2018 &copy invely's</footer>
   </body>
 </html>
