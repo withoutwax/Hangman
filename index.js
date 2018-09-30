@@ -1,8 +1,7 @@
 // SELECT WORD FROM WORD LIST
-let random_index = Math.floor(Math.random() * words.length);
-
-let secret_word = words[random_index].toUpperCase();
-console.log("YOU! You are such a cheater! I bet you are a developer... aren't you?! Anyways... the secret word is...: ", secret_word);
+let random_index;
+let secret_word;
+preset();
 let test_word = 'WILLISAWSOME';
 let guess_word = [];
 
@@ -89,7 +88,8 @@ function displayWarning(status, input_alphabet) {
 
 // RESTART FUNCTION
 function restart() {
-  secret_word = 'WIN';
+  preset();
+  // secret_word = 'WIN';
   guess_word = [];
 
   total_no_guesses = 10;
@@ -106,4 +106,11 @@ function restart() {
   // guess_word = guess_word.join(' ');
   document.getElementById("status").innerHTML = guess_word.join(' ');
   document.getElementById("warning").style.visibility = "hidden";
+
+}
+
+function preset() {
+  random_index = Math.floor(Math.random() * words.length);
+  secret_word = words[random_index].toUpperCase();
+  console.log("YOU! You are such a cheater! I bet you are a developer... aren't you?! Anyways... the secret word is...: ", secret_word);
 }
