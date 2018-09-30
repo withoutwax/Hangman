@@ -30,6 +30,7 @@ body {
 
   padding: 0% 3% 3% 3%; /* TRBL */
   margin-bottom: 3%;
+  min-height: 40vh;
 
 }
 .main-guess-area {
@@ -49,14 +50,35 @@ body {
   font-size: .4em;
 }
 
+/* HELPER AREA - GUESS REMAINING*/
+.main-guess-label {
+  margin-top: 20%;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.main-guess-left {
+  font-weight: 600;
+  font-size: 5em;
+  color: red;
+}
+.restart {
+  font-size: 1.2em;
+  visibility: hidden;
+}
+
 /* INPUT - KEYBOARD */
+.main-keyboard-area {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
 .main-select-word {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
+  margin-right: 100px;
 
-  width: 60%;
+  /* width: 60%; */
 }
 button {
   font-family: inherit;
@@ -83,7 +105,13 @@ button:hover {
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.25, 1.25);
 }
-
+.main-utility-button {
+  /* justify-self: center; */
+}
+#input-restart {
+  /* max-width: 150px;
+  max-height: 80px; */
+}
 
 .test-area {
   border: solid red 1px;

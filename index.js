@@ -29,10 +29,6 @@ function setAlphabet(alphabet) {
       }
     }
     displayWarning("correct", input_alphabet);
-    // document.getElementById("warning").innerHTML = "That's correct!";
-    // document.getElementById("warning").style.color = "green";
-    // document.getElementById("warning").style.visibility = "visible";
-
   } else {
     total_no_guesses -= 1;
     document.getElementById("scores").innerHTML = total_no_guesses;
@@ -42,9 +38,6 @@ function setAlphabet(alphabet) {
 
   if (input_alphabet in letters_guessed) {
     displayWarning("duplicate", input_alphabet);
-    // document.getElementById("warning").innerHTML = "You've already guessed that letter! - " + input_alphabet;
-    // document.getElementById("warning").style.color = "red";
-    // document.getElementById("warning").style.visibility = "visible";
     letters_guessed[input_alphabet] += 1
   } else {
     letters_guessed[input_alphabet] = 1
@@ -88,4 +81,25 @@ function displayWarning(status, input_alphabet) {
     document.getElementById("warning").style.color = "red";
     document.getElementById("warning").style.visibility = "visible";
   }
+}
+
+// RESTART FUNCTION
+function restart() {
+  secret_word = 'WIN';
+  guess_word = [];
+
+  total_no_guesses = 10;
+  // input_alphabet;
+  letters_guessed = {};
+  letters_guessed_output = '';
+  // PRESETUP ==============================
+  // Update Score
+  document.getElementById("scores").innerHTML = total_no_guesses;
+  for (let i = 0; i < secret_word.length; i++) {
+    guess_word.push('_');
+  }
+  // DISPLAY CURRENT STATUS
+  // guess_word = guess_word.join(' ');
+  document.getElementById("status").innerHTML = guess_word.join(' ');
+  document.getElementById("warning").style.visibility = "hidden";
 }

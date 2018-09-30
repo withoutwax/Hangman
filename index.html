@@ -27,12 +27,12 @@
         </div>
 
         <div class="main-score">
-          <p>Guess(es) Left:</p>
-          <p id="scores">00</p>
+          <p class="main-guess-label">Guess Left:</p>
+          <p class="main-guess-left" id="scores">00</p>
           <br>
-
+          <div class="restart">Play Again!</div>
           <!-- THIS IS A TEST - FOR DEVELOPER MODE-->
-          <div class="test-area">
+          <!-- <div class="test-area">
             <p>Alphabet:</p>
             <p id="word-input">?</p>
 
@@ -41,41 +41,47 @@
               <p>Guessed Alphabet:</p>
               <p id="guessed">-</p>
             </article>
-          </div>
+          </div> -->
           <!-- DEVELOPER MODE END -->
 
         </div>
       </section>
 
       <!-- Word -->
-      <article class="main-select-word">
-        <button type="button" id="input-A" onclick="setAlphabet('A')" name="button">A</button>
-        <button type="button" id="input-B" onclick="setAlphabet('B')" name="button">B</button>
-        <button type="button" id="input-C" onclick="setAlphabet('C')" name="button">C</button>
-        <button type="button" id="input-D" onclick="setAlphabet('D')" name="button">D</button>
-        <button type="button" id="input-E" onclick="setAlphabet('E')" name="button">E</button>
-        <button type="button" id="input-F" onclick="setAlphabet('F')" name="button">F</button>
-        <button type="button" id="input-G" onclick="setAlphabet('G')" name="button">G</button>
-        <button type="button" id="input-H" onclick="setAlphabet('H')" name="button">H</button>
-        <button type="button" id="input-I" onclick="setAlphabet('I')" name="button">I</button>
-        <button type="button" id="input-J" onclick="setAlphabet('J')" name="button">J</button>
-        <button type="button" id="input-K" onclick="setAlphabet('K')" name="button">K</button>
-        <button type="button" id="input-L" onclick="setAlphabet('L')" name="button">L</button>
-        <button type="button" id="input-M" onclick="setAlphabet('M')" name="button">M</button>
-        <button type="button" id="input-N" onclick="setAlphabet('N')" name="button">N</button>
-        <button type="button" id="input-O" onclick="setAlphabet('O')" name="button">O</button>
-        <button type="button" id="input-P" onclick="setAlphabet('P')" name="button">P</button>
-        <button type="button" id="input-Q" onclick="setAlphabet('Q')" name="button">Q</button>
-        <button type="button" id="input-R" onclick="setAlphabet('R')" name="button">R</button>
-        <button type="button" id="input-S" onclick="setAlphabet('S')" name="button">S</button>
-        <button type="button" id="input-T" onclick="setAlphabet('T')" name="button">T</button>
-        <button type="button" id="input-U" onclick="setAlphabet('U')" name="button">U</button>
-        <button type="button" id="input-V" onclick="setAlphabet('V')" name="button">V</button>
-        <button type="button" id="input-W" onclick="setAlphabet('W')" name="button">W</button>
-        <button type="button" id="input-X" onclick="setAlphabet('X')" name="button">X</button>
-        <button type="button" id="input-Y" onclick="setAlphabet('Y')" name="button">Y</button>
-        <button type="button" id="input-Z" onclick="setAlphabet('Z')" name="button">Z</button>
-      </article>
+      <section class="main-keyboard-area">
+        <article class="main-select-word">
+          <button type="button" id="input-A" onclick="setAlphabet('A')" name="button">A</button>
+          <button type="button" id="input-B" onclick="setAlphabet('B')" name="button">B</button>
+          <button type="button" id="input-C" onclick="setAlphabet('C')" name="button">C</button>
+          <button type="button" id="input-D" onclick="setAlphabet('D')" name="button">D</button>
+          <button type="button" id="input-E" onclick="setAlphabet('E')" name="button">E</button>
+          <button type="button" id="input-F" onclick="setAlphabet('F')" name="button">F</button>
+          <button type="button" id="input-G" onclick="setAlphabet('G')" name="button">G</button>
+          <button type="button" id="input-H" onclick="setAlphabet('H')" name="button">H</button>
+          <button type="button" id="input-I" onclick="setAlphabet('I')" name="button">I</button>
+          <button type="button" id="input-J" onclick="setAlphabet('J')" name="button">J</button>
+          <button type="button" id="input-K" onclick="setAlphabet('K')" name="button">K</button>
+          <button type="button" id="input-L" onclick="setAlphabet('L')" name="button">L</button>
+          <button type="button" id="input-M" onclick="setAlphabet('M')" name="button">M</button>
+          <button type="button" id="input-N" onclick="setAlphabet('N')" name="button">N</button>
+          <button type="button" id="input-O" onclick="setAlphabet('O')" name="button">O</button>
+          <button type="button" id="input-P" onclick="setAlphabet('P')" name="button">P</button>
+          <button type="button" id="input-Q" onclick="setAlphabet('Q')" name="button">Q</button>
+          <button type="button" id="input-R" onclick="setAlphabet('R')" name="button">R</button>
+          <button type="button" id="input-S" onclick="setAlphabet('S')" name="button">S</button>
+          <button type="button" id="input-T" onclick="setAlphabet('T')" name="button">T</button>
+          <button type="button" id="input-U" onclick="setAlphabet('U')" name="button">U</button>
+          <button type="button" id="input-V" onclick="setAlphabet('V')" name="button">V</button>
+          <button type="button" id="input-W" onclick="setAlphabet('W')" name="button">W</button>
+          <button type="button" id="input-X" onclick="setAlphabet('X')" name="button">X</button>
+          <button type="button" id="input-Y" onclick="setAlphabet('Y')" name="button">Y</button>
+          <button type="button" id="input-Z" onclick="setAlphabet('Z')" name="button">Z</button>
+        </article>
+        <article class="main-utility-button">
+          <button type="button" id="input-restart" onclick="restart()" name="button">Restart</button>
+        </article>
+      </section>
+
     </main>
 
     <script type="text/javascript" src="index.js"></script>
