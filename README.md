@@ -15,4 +15,4 @@ This game is originally created to teach some students to learn English vocabula
 
 - [ ] Input system - User might use this app as a study device (which is actually the original motivation for this game).
 - [ ] Server / Database for the Hangman game to store vocabularies and definitions of the words.
- - [ ] Profile / Account system - Now it's more like a flashcard app, in a Hangman game.
+- [ ] Profile / Account system - Now it's more like a flashcard app, in a Hangman game.
